@@ -1,0 +1,60 @@
+div#main {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.nav {
+  background-color: lightblue;
+  border-right: 1px solid darkgray;
+}
+
+.viewer {
+  background-color: lightgreen;
+}
+
+.right {
+  float: right;
+}
+
+.user {
+  border-bottom: 1px solid darkgray;
+  color: darkblue;
+  font-size: 14px;
+  padding: 5px 10px;
+  text-align: right;
+}
+
+.preview {
+  margin: 20px 10px;
+}
+
+.preview * {
+  margin: 0px;
+}
+
+.preview p {
+  color: darkgray;
+  font-size: 12px;
+}
+
+.editor {
+  padding: 0px 10px 20px;
+}
+
+.editor > * {
+  background-color: inherit;
+  border: none;
+  width: 100%;
+}
+
+.editor-subject {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.editor-task {
+  margin: 5px 10px;
+}
