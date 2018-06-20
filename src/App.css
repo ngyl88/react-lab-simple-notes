@@ -58,3 +58,11 @@ div#main {
 .editor-task {
   margin: 5px 10px;
 }
+
+.editor-task textarea {
+  width: 85%;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  vertical-align: top;
+}

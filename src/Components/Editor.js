@@ -7,13 +7,17 @@ const Editor = props => (
       value={props.note.subject}
       onChange={event => props.onSubjectChange(props.note, event)}
     />
-    {props.note.tasks.map((task, index) => {
-      return (
-        <p className="editor-task" key={index}>
-          + {task}
-        </p>
-      );
-    })}
+    <div className="editor-tasks">
+      {props.note.tasks.map((task, index) => (
+        <div className="editor-task" key={index}>
+          +{" "}
+          <textarea value={task}
+            onChange={event => props.onTaskChange(index, event)}
+          />
+        </div>
+      ))}
+      <button onClick={props.createTask}>+</button>
+    </div>
   </div>
 );
 

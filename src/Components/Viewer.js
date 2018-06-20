@@ -11,7 +11,9 @@ const Viewer = props => {
       ) : (
         <Editor note={props.note} 
         editorInfo={props.editorInfo}
-        onSubjectChange={props.onSubjectChange} />
+        onSubjectChange={props.onSubjectChange}
+        onTaskChange={props.onTaskChange}
+        createTask={props.createTask} />
       )}
     </div>
   );
