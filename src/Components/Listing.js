@@ -4,7 +4,9 @@ import ListingNote from "./ListingNote";
 const Listing = props => {
   return (
     <div className="nav">
-      <button className="right">+</button>
+      <button className="right" onClick={() => props.createNote()}>
+        +
+      </button>
       {props.notes.map((note, index) => (
         <ListingNote
           key={index}

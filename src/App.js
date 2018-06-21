@@ -78,6 +78,16 @@ class App extends Component {
   };
 
   //todo: create @ listing
+  createNote = () => {
+    const newNote = {
+      subject: "",
+      tasks: [""]
+    };
+    this.setState({
+      activeNoteIndex: this.state.notes.length,
+      notes: [...this.state.notes, newNote]
+    });
+  };
 
   render() {
     const activeNoteIndex = this.state.activeNoteIndex;
@@ -88,6 +98,7 @@ class App extends Component {
           <Listing
             notes={this.state.notes}
             onClick={this.handleClickOnListing}
+            createNote={this.createNote}
           />
           <Viewer
             userId={this.state.userId}
